@@ -1,9 +1,17 @@
 
+# Example:
+#  x <- matrix(rnorm(10), nrow = 8)        
+# cx <- makeCacheMatrix(x)  // Create our special matrix
+# cx$get()                // Return the matrix
+# cacheSolve(cx)                            // Return the inverse
+# cacheSolve(cx)                            // return the cached inverse
+
+
 # makeCacheMatrix: return a list of functions to:
-# 1. Set the value of the matrix
-# 2. Get the value of the matrix
-# 3. Set the value of the inverse
-# 4. Get the value of the inverse
+# 1. Set value of the matrix
+# 2. Get value of the matrix
+# 3. SetinvMat value of the inverse
+# 4. GetinvMat value of the inverse
 makeCacheMatrix <- function(x = matrix()) {
     #  cached inverse matrix
     invMat <- NULL
